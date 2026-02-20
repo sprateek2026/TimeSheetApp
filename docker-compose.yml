@@ -4,12 +4,10 @@ services:
 
   timesheet-api:
     build: .
-    container_name: timesheet-api
     ports:
       - "8000:80"
-    environment:
-      - ConnectionStrings__DefaultConnection=Server=db;Database=${DB_NAME};User=sa;Password=${SA_PASSWORD};
-      - Jwt__Key=${JWT_KEY}
+    env_file:
+      - .env
     depends_on:
       - db
 
@@ -17,7 +15,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: timesheet-db
     environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=${SA_PASSWORD}
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ${SA_PASSWORD}
     ports:
       - "1433:1433"
