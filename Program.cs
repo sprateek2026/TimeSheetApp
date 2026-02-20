@@ -188,7 +188,7 @@ app.UseSerilogRequestLogging();
 app.MapControllers();
 try
 {
-    // 🔥 APPLY MIGRATIONS HERE
+    // 🔥 APPLY MIGRATIONS
     using (var scope = app.Services.CreateScope())
     {
         var dbContext = scope.ServiceProvider
@@ -196,10 +196,7 @@ try
 
         dbContext.Database.Migrate();
     }
-    }
 
-try
-{
     Log.Information("Starting application");
     app.Run();
 }
