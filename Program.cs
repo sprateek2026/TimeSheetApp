@@ -162,7 +162,7 @@ var app = builder.Build();
 //}
 
 // IMPORTANT for IIS virtual path
-app.UsePathBase("/TimeSheetManagement");
+//app.UsePathBase("/TimeSheetManagement");
 
 // Enable Swagger in IIS
 app.UseSwagger();
