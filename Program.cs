@@ -196,6 +196,7 @@ try
 
         dbContext.Database.Migrate();
     }
+    }
 
 try
 {
