@@ -1,0 +1,8 @@
+[2026-02-14 12:16:38 INF] Starting application
+[2026-02-14 22:07:46 INF] Starting application
+[2026-02-14 22:09:30 WRN] No store type was specified for the decimal property 'TotalDailyHr' on entity type 'DailySummary'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-14 22:09:30 WRN] No store type was specified for the decimal property 'TOTALDAILYHR' on entity type 'TM_DAILYSUMMARY'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-14 22:09:30 WRN] No store type was specified for the decimal property 'LOGGEDHOURS' on entity type 'TM_TIMELOGDETAILS'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-14 22:09:31 INF] HTTP POST /api/auth/login responded 200 in 7459.2129 ms
+[2026-02-14 22:09:59 INF] get customer data by user 3
+[2026-02-14 22:09:59 INF] HTTP GET /api/timesheets/Customers responded 200 in 3378.7333 ms
