@@ -1,12 +1,11 @@
 services:
-
   timesheet-api:
     build: .
     ports:
       - "5000:80"
     environment:
-      ConnectionStrings__DefaultConnection: Server=db;Database=TimeSheetManagement;User=sa;Password=${SA_PASSWORD};
-      Jwt__Key: {JWT_KEY}
+      ConnectionStrings__DefaultConnection: "Server=db;Database=timesheet-db;User=sa;Password=${SA_PASSWORD};"
+      Jwt__Key: "${JWT_KEY}"
     depends_on:
       - db
 
@@ -15,6 +14,6 @@ services:
     container_name: timesheet-db
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: ${SA_PASSWORD}
+      SA_PASSWORD: "${SA_PASSWORD}"
     ports:
       - "1433:1433"
