@@ -4,7 +4,7 @@ services:
     ports:
       - "5000:80"
     environment:
-      ConnectionStrings__DefaultConnection: "Server=db;Database=timesheet-db;User=sa;Password=${SA_PASSWORD};"
+      ConnectionStrings__DefaultConnection: "Server=db;Database=TimeSheetManagement;User=sa;Password=${SA_PASSWORD};"
       Jwt__Key: "${JWT_KEY}"
     depends_on:
       - db
