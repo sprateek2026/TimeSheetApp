@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Timesheet.Api.Models
 { added by prachi for testing
+[table(prachi)]
 
 
     [Table("TM_DAILYSUMMARIES")]
